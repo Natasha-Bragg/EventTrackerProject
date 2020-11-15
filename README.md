@@ -1,4 +1,4 @@
-# Event Tracker Project- New Parent application
+# Event Tracker Project- New Parent Application
 
 ### Overview
 
