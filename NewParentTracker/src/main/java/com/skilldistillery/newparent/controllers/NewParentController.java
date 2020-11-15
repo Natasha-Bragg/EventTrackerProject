@@ -30,10 +30,13 @@ public class NewParentController {
 	public String ping() {
 		return "pong";
 	}
+	
+	
 	@GetMapping("baby")
 	public List<Baby> list(){
 		return svc.index();
 	}
+	
 	@GetMapping("baby/{babyId}")
 	public Baby showBaby(@PathVariable Integer babyId, HttpServletResponse response) {
 		Baby baby = svc.show(babyId);
