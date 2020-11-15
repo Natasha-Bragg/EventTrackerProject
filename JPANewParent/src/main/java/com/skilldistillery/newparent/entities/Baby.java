@@ -1,5 +1,6 @@
 package com.skilldistillery.newparent.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,17 +15,23 @@ public class Baby {
 	
 	private String name;
 	
-	private int age;
+	private String age;
+	
+	@Column(name = "last_feed")
+	private String lastFeed;
+	
+	@Column(name = "time_slept")
+	private String timeSlept;
+	
+	@Column(name = "number_of_naps")
+	private String numberOfNaps;
+	
+	@Column(name = "number_of_diaper_changes")
+	private String numberOfDiaperChanges;
 
 
 	public Baby() {
 		super();
-	}
-	public Baby(int id, String name, int age) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.age = age;
 	}
 
 	public int getId() {
@@ -43,12 +50,45 @@ public class Baby {
 		this.name = name;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
+	}
+	
+
+	public String getLastFeed() {
+		return lastFeed;
+	}
+
+	public void setLastFeed(String lastFeed) {
+		this.lastFeed = lastFeed;
+	}
+
+	public String getTimeSlept() {
+		return timeSlept;
+	}
+
+	public void setTimeSlept(String timeSlept) {
+		this.timeSlept = timeSlept;
+	}
+
+	public String getNumberOfNaps() {
+		return numberOfNaps;
+	}
+
+	public void setNumberOfNaps(String numberOfNaps) {
+		this.numberOfNaps = numberOfNaps;
+	}
+
+	public String getNumberOfDiaperChanges() {
+		return numberOfDiaperChanges;
+	}
+
+	public void setNumberOfDiaperChanges(String numberOfDiaperChanges) {
+		this.numberOfDiaperChanges = numberOfDiaperChanges;
 	}
 
 	@Override
@@ -75,8 +115,15 @@ public class Baby {
 
 	@Override
 	public String toString() {
-		return "Baby [id=" + id + ", name=" + name + ", age=" + age + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Baby [id=").append(id).append(", name=").append(name).append(", age=").append(age)
+				.append(", lastFeed=").append(lastFeed).append(", timeSlept=").append(timeSlept)
+				.append(", numberOfNaps=").append(numberOfNaps).append(", numberOfDiaperChanges=")
+				.append(numberOfDiaperChanges).append("]");
+		return builder.toString();
 	}
+
+
 	
 	
 

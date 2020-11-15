@@ -45,6 +45,8 @@ class BabyTest {
 	void test_Baby_enitiy_mapping() {
 		assertNotNull(baby);
 		assertEquals("Kadence", baby.getName());
+		assertEquals("10", baby.getAge());
+		assertEquals("12:00", baby.getLastFeed());
 		
 	}
 

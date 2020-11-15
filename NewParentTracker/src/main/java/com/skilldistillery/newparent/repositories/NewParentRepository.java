@@ -6,5 +6,6 @@ import com.skilldistillery.newparent.entities.Baby;
 
 public interface NewParentRepository extends JpaRepository<Baby, Integer> {
 	
+	
 
 }

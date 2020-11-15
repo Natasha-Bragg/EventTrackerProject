@@ -23,7 +23,11 @@ DROP TABLE IF EXISTS `baby` ;
 CREATE TABLE IF NOT EXISTS `baby` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `age` INT NULL,
+  `age` VARCHAR(45) NULL,
+  `last_feed` VARCHAR(200) NULL,
+  `time_slept` VARCHAR(200) NULL,
+  `number_of_naps` VARCHAR(200) NULL,
+  `number_of_diaper_changes` VARCHAR(200) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -43,7 +47,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `newparentdb`;
-INSERT INTO `baby` (`id`, `name`, `age`) VALUES (1, 'Kadence', 10);
+INSERT INTO `baby` (`id`, `name`, `age`, `last_feed`, `time_slept`, `number_of_naps`, `number_of_diaper_changes`) VALUES (1, 'Kadence', '10', '12:00', '8 hrs', '1', '0');
+INSERT INTO `baby` (`id`, `name`, `age`, `last_feed`, `time_slept`, `number_of_naps`, `number_of_diaper_changes`) VALUES (2, 'Max', '1', '13:45', '9.5 hrs', '2', '3');
+INSERT INTO `baby` (`id`, `name`, `age`, `last_feed`, `time_slept`, `number_of_naps`, `number_of_diaper_changes`) VALUES (3, 'Joey', '2', '12:45', '9.25 hrs', '1', '2');
+INSERT INTO `baby` (`id`, `name`, `age`, `last_feed`, `time_slept`, `number_of_naps`, `number_of_diaper_changes`) VALUES (4, 'Molly', '3', '10:12', '10 hrs', '0', '0');
+INSERT INTO `baby` (`id`, `name`, `age`, `last_feed`, `time_slept`, `number_of_naps`, `number_of_diaper_changes`) VALUES (5, 'Madi', '1', '16:00', '9 hrs', '2', '4');
 
 COMMIT;
 
