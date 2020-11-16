@@ -37,6 +37,10 @@ Refer to the list below for possible functionalities of the site.
 
 ### Expected Routes
 
+Navigate to http://3.23.160.154:8080/NewParentTracker/api/ping
+You should see the text "pong" that is how you will know you are in the right place.
+Use the below routes to access the database:
+
 | Return Type   | Route                 | Functionality                  |
 |---------------|-----------------------|--------------------------------|
 | `List<Baby>`  |`GET api/baby`         | Gets all babies                |
