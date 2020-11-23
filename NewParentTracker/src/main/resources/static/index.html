@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Parent Tracker</title>
+<script type="text/javascript" src="js/eventTracker.js"></script>
+</head>
+<body>
+
+<h1>New Parent Tracker</h1>
+
+<h3>Find A Baby By Id</h3>
+<form name="searchForBabyForm">
+    <input type="number" name="babyId">
+    <button name="lookup">Get Baby by Id</button>
+  </form>
+
+  <div id="output">
+    <div id="babyData"></div>
+  </div>
+  <hr>
+  <h3>Add A New Baby</h3>
+  <form name="newBabyForm">
+    <input type="text" name="name" placeholder="Baby's Name"> <br>
+    <input type="text" name="age" placeholder="Baby's Age"> <br>
+    <input type="text" name="lastFeed" placeholder="When Was Baby's Last Feed Today"> <br>
+    <input type="text" name="timeSlept" placeholder="How Much Time Has Baby Slept Today"> <br>
+    <input type="text" name="numberOfNaps" placeholder="How Many Naps Has Baby Had Today"> <br>
+    <input type="text" name="numberOfDiaperChanges" placeholder="How Many Diaper Changes Today"> <br>
+    <button type="submit" name="submit" >Add New Baby </button> <br>
+
+  </form>
+<br>
+<br>
+
+
+<h3>Update An Existing Baby</h3>
+<form name="updateBabyForm">
+    <input type="text" name="babyId" placeholder="Baby's Name"> <br>
+    <input type="text" name="age" placeholder="Baby's Age"> <br>
+    <input type="text" name="lastFeed" placeholder="When Was Baby's Last Feed Today"> <br>
+    <input type="text" name="timeSlept" placeholder="How Much Time Has Baby Slept Today"> <br>
+    <input type="text" name="numberOfNaps" placeholder="How Many Naps Has Baby Had Today"> <br>
+    <input type="text" name="numberOfDiaperChanges" placeholder="How Many Diaper Changes Today"> <br>
+    <button type="submit" name="submit" >Update</button> <br>
+
+  </form>
+<br>
+<br>
+<br>
+
+
+<h3>Delete A Baby By Id</h3>
+  <form name="deleteBabyForm">
+    <input type="number" name="babyId">
+    <button name="submit">Delete Baby by Id</button>
+  </form>
+
+</body>
+</html>
